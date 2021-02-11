@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 85vw;
+    height: 85vh;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        -90deg,
+        rgba(218, 86, 168, 0.5),
+        rgba(218, 86, 168, 0.7),
+        rgba(218, 86, 168, 0.9)
+    );
+}
+
+.wrapper {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(33, 7, 55, 0.9),
+        rgba(33, 7, 55, 0.7),
+        rgba(33, 7, 55, 0.5)
+    );
+}
+
+section {
+    flex: 1;
+}
+.content {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.content h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.content h2 {
+    color: #eee;
+    font-size: 14px;
+    font-weight: 100;
+    width: 70%;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.content form {
+    width: 100%;
+    position: relative;
+}
+.content form input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    width: 100px;
+    border-radius: 10px;
+    width: 90%;
+    padding: 20px 15px;
+}
+.content form input::placeholder {
+    color: #fff;
+    font-size: larger;
+}
+
+.content form button {
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(rgba(64, 244, 208, 1), rgba(64, 244, 208, 0.6));
+    cursor: pointer;
+}
+
+.card-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    width: 450px;
+    max-height: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 25px;
+    color: #fff;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    animation: swing 30s linear infinite both;
+}
+
+.card > h1 {
+    font-weight: 300;
+}
+.card .card-chip {
+    width: 70px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card .card-chip div.line-vertical {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 20px;
+    position: absolute;
+}
+
+.card .card-chip div.line-horizontal {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 20px;
+    width: 100%;
+}
+
+.card .card-chip div.chip-center {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #fff;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.card .card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card .card-footer span {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mini-card {
+    height: 80px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    animation: swing 10s linear infinite reverse both;
+}
+
+.mini-card h1,
+.mini-card h2 {
+    font-size: 10px;
+}
+.mini-card p,
+.mini-card span {
+    font-size: 8px;
+}
+
+.mini-card .card-chip {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mini-card .card-chip div.line-vertical {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 10px;
+    position: absolute;
+}
+
+.mini-card .card-chip div.line-horizontal {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 10px;
+    width: 100%;
+}
+
+.mini-card .card-chip div.chip-center {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #fff;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+@keyframes swing {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(360, 360, 360, 360deg);
+    }
+}
